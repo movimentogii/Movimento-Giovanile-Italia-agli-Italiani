@@ -1,0 +1,352 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #0d0d0d;
+  color: white;
+  line-height: 1.6;
+}
+
+/* HEADER */
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 20px;
+  background: #111;
+  border-bottom: 1px solid #222;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* BOTTONE MENU */
+.mobile-menu-button {
+  position: absolute;
+  left: 20px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+/* LOGO AREA */
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* CORNICE ORO LOGO */
+.gold-frame {
+  width: 55px;
+  height: 55px;
+  border: 2px solid #d4af37;
+  border-radius: 8px;
+  background: rgba(255, 215, 0, 0.05);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* TESTO LOGO */
+.logo-text .small {
+  font-size: 11px;
+  opacity: 0.8;
+}
+
+.logo-text .big {
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: -2px;
+}
+
+/* MENU LATERALE */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -260px;
+  width: 260px;
+  height: 100%;
+  background: #111;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  transition: 0.35s ease;
+  z-index: 9999;
+  border-right: 2px solid #d4af37;
+}
+
+.side-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 0;
+  border-bottom: 1px solid #222;
+}
+
+.side-menu a:hover {
+  color: #d4af37;
+}
+
+.close-menu {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 26px;
+  align-self: flex-end;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+/* SEZIONI */
+.section {
+  padding: 40px 20px;
+}
+
+.section-inner {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.section-inner h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+/* PAGE TITLE */
+.page-title {
+  text-align: center;
+  padding: 40px 20px 10px;
+}
+
+.page-title h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 32px;
+}
+
+.title-underline {
+  width: 80px;
+  height: 3px;
+  background: #d4af37;
+  margin: 10px auto 0;
+}
+
+/* HERO */
+.hero-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.hero-section h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 38px;
+  margin-bottom: 10px;
+}
+
+.hero-section p {
+  font-size: 17px;
+  opacity: 0.9;
+  margin-bottom: 25px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 12px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.primary {
+  background: #1a73e8;
+  color: white;
+}
+
+.secondary {
+  background: #333;
+  color: white;
+  border: 1px solid #555;
+}
+
+/* STRISCIA TRICOLORE */
+.tricolore-bar {
+  display: flex;
+  margin: 30px auto 0;
+  width: 180px;
+  height: 12px;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 0 4px rgba(255,255,255,0.2);
+}
+
+.tricolore-bar div {
+  flex: 1;
+}
+
+.tricolore-bar .verde { background: #008000; }
+.tricolore-bar .bianco { background: #ffffff; }
+.tricolore-bar .rosso { background: #d00000; }
+
+/* CARDS */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  background: #111;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #222;
+  text-align: left;
+}
+
+.card h3 {
+  margin-bottom: 8px;
+}
+
+.card .meta {
+  font-size: 13px;
+  opacity: 0.7;
+  margin-bottom: 10px;
+}
+
+/* CORNICI IMMAGINI DINAMICHE (EVENTI + GIORNALINO) */
+.post-image-frame {
+  display: block;
+  width: 100%;
+  border: 2px solid #d4af37;
+  border-radius: 10px;
+  background: rgba(255, 215, 0, 0.05);
+  overflow: hidden;
+  padding: 4px;
+  margin-bottom: 1rem;
+}
+
+.post-image-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* GALLERIA */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.gallery-item {
+  border: 2px solid #d4af37;
+  border-radius: 10px;
+  overflow: hidden;
+  background: rgba(255, 215, 0, 0.05);
+  padding: 4px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+}
+
+/* NEGOZIO */
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.product-card {
+  border: 2px solid #d4af37;
+  border-radius: 10px;
+  padding: 15px;
+  background: rgba(255, 215, 0, 0.05);
+  text-align: center;
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.product-card .price {
+  font-weight: bold;
+  color: #d4af37;
+  margin-top: 5px;
+}
+
+/* FORM */
+.form-row {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-row label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.form-row input,
+.form-row textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background: #111;
+  color: white;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* FOOTER */
+.site-footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  margin-top: 20px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero-section h1 { font-size: 26px; }
+  .hero-section p { font-size: 15px; }
+  .hero-buttons { flex-direction: column; }
+}
